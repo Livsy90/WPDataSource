@@ -18,7 +18,11 @@ public struct WPDataSource {
         )
     }
     
-    public func getPostList(page: Int) async -> Result<[RefinedPost], Error> {
+}
+
+public extension WPDataSource {
+    
+    func getPostList(page: Int) async -> Result<[Post], Error> {
         do {
             let postList = try await manager.getPosts(pageNumber: page)
             return .success(postList)
