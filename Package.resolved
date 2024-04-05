@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "skavoknetworking",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Livsy90/SkavokNetworking.git",
+      "state" : {
+        "revision" : "612c2b9517a5df7674c4e9b80bbac3a224cbc0f9",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "swiftpresso",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Livsy90/SwiftPresso.git",
+      "state" : {
+        "revision" : "f4561977dd85ff4572778fcd9fa70c340737d347",
+        "version" : "1.0.1"
+      }
+    }
+  ],
+  "version" : 2
+}
