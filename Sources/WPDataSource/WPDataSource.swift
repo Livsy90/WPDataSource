@@ -8,7 +8,7 @@ public struct WPDataSource {
     public init(
         urlString: String,
         httpScheme: HTTPScheme,
-        additionalHeader: [AnyHashable: Any]?
+        additionalHeaders: [AnyHashable: Any]?
     ) {
         
         guard let url = URL(string: "\(urlString)wp-json") else {
@@ -18,7 +18,7 @@ public struct WPDataSource {
         manager = SwiftPressoFactory.makePostListManager(
             url: url,
             httpScheme: httpScheme,
-            httpAdditionalHeaders: additionalHeader
+            httpAdditionalHeaders: additionalHeaders
         )
     }
     
