@@ -6,17 +6,13 @@ public struct WPDataSource {
     private let manager: PostListManagerProtocol
     
     public init(
-        urlString: String,
+        host: String,
         httpScheme: HTTPScheme,
         additionalHeaders: [AnyHashable: Any]?
     ) {
         
-        guard let url = URL(string: "\(urlString)wp-json") else {
-            assert(false, "Invalid URL")
-        }
-        
-        manager = SwiftPressoFactory.makePostListManager(
-            url: url,
+        manager = SwiftPressoFactory.postListManager(
+            host: host,
             httpScheme: httpScheme,
             httpAdditionalHeaders: additionalHeaders
         )
